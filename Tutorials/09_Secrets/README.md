@@ -1,9 +1,10 @@
-# Authentication-Secrets
+# Authentication-Secrets Project
 
 In this application we will implement a simple local and Google-based authentication process and we will save a secret in our DB. The provided code already has the EJS and a basic Server configured as the starting point.
 
 The MongoDB model is also provided.
 
+## Instructions
 To complete this task you must:
 
 1. Configure your application on Google console and get the client id
@@ -45,3 +46,6 @@ To complete this task you must:
 - For the **POST** method, check the authentication status, if it is correct, save the value provided in the form, else return to _login_
 
 8. Implement the **/logout** endpoint
+
+---
+[Sample solution](https://gist.github.com/gcastillo56/9c05cbfe88e714da8027e4f7d58b0dae)

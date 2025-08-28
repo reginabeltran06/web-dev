@@ -1,6 +1,11 @@
 # Keeper App
 
-## Leg 1
+In this tutorial, we will work with React to create an interactive application that will allow us to save information at least on the session. To work this one out, we will work in 3 legs. 
+- In the first one, we will create the basic components. 
+- On the second one, we will use props to pass values from parent to child components.
+- Finally on the third leg we will have a top-down-top integration of our components.
+
+## Leg 1: Basic components
 
 1. Create a new React app
 2. Create the _App.jsx_ component
@@ -10,23 +15,19 @@
 6. Make sure that the final website is styled like the example.
    - Be careful and thoroughful on how to implement the styles
 
----
-
-## Leg 2
+## Leg 2: Top-down props
 
 In this next part, we will use the content of the _notes.js_ file to render all those notes into our front end.
 
 1. Modify the _Note_ component, so that via **props** it receives now the title and the content.
 2. Using the **map** function, get the content from the _notes.js_ file and create all the notes that should be displayed in the interface. Don't forget the key element to avoid the warning on the console.
 
----
-
-## Leg 3
+## Leg 3: Component tree management
 
 1. Implement the add note functionality.
 2. Implement the delete note functionality.
 
-## In this third leg, we will not use the _notes.js_ file, we will rather start with an empty screen.
+In this third leg, we will not use the _notes.js_ file, we will rather start with an empty screen.
 
 ### Add note
 
@@ -67,3 +68,6 @@ In this next part, we will use the content of the _notes.js_ file to render all 
 3. Pass a id over to the _Note_ component, pass it back to the App when deleting.
 
 - Using the **key** value we got on the _Note_ component call the delete function of the _App_ component.
+
+---
+[Sample solution](https://gist.github.com/gcastillo56/83a579ee0cefbe81c7d0147a593e90af)
