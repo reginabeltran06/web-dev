@@ -1,3 +1,32 @@
-body {
-    margin: 0;
+.top, .mid, .bot {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    border: 10px solid black;
+    box-sizing: border-box; /*to make the corners touch*/
+}
+
+.top {
+    background-color: lightcoral;
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+
+.mid {
+    background-color: lightseagreen;
+    border: 20px solid black;
+    top:200px;
+    left:200px;
+}
+
+.bot {
+    background-color: lightblue;
+    border: 10px solid black;
+    top: 400px;
+    left: 400px;
 }

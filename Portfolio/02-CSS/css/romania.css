@@ -1,3 +1,23 @@
-body {
-    margin: 0;
+
+.flag {
+    display: flex;
+    width: 300px;   
+    height: 200px;  
+    margin: 20px auto;
+}
+
+.flag div {
+    flex: 1; 
+}
+
+.top {
+    background: rgb(7, 7, 199);
+}
+
+.mid {
+    background: rgb(255, 208, 0);
+}
+
+.bot {
+    background: rgb(216, 2, 2); 
 }
