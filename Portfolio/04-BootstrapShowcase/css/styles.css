@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #ffe6f0;
+  font-family: "Roboto Flex", serif;
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-navbar {
+  background-color: rgb(228, 137, 167);
+  color: white;
+  font-family: "Klee One", sans-serif;
+  font-size: .9rem;
+}
+
+.text-purple {
+  color: rgb(165, 42, 165) !important;
+}
+.bg-purple {
+  background-color: rgb(165, 42, 165) !important;
+}
+
+h1 {
+  font-family: "Sour Gummy", cursive;
+  color: rgb(228, 137, 167);
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin:  0;
+}
+
+h2 {
+  font-family: "Klee One", sans-serif;
+  color: rgb(165, 42, 165); 
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "Klee One", sans-serif;
+  color: #a466bd;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+blockquote {
+  background-color: rgb(228, 137, 167);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Klee One", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  max-width: 700px; 
+  margin: 30px auto;
+}
+
+.text-muted {
+  font-size: 0.95rem;          
+  color: rgb(193, 177, 197) ;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link.active {
+  color: white;
+  font-weight: bold;
+}
+
+.accordion-header, .food-list, .accordion-body {
+  font-family: "Sour Gummy", serif;
+  font-size: 1.2rem;
+  color: rgb(51, 51, 51);
+}
+
+
+
+.badge.text-bg-secondary.p-2 {
+  font-size: 1.1rem;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.media-item:hover, .hero-item:hover, #pp:hover {
+  box-shadow: 0 10px 20px rgb(168, 119, 168);
+  transform: translateY(-3px);
+}
+
+
+#progress-bar .card{
+  margin: 20px;
+}

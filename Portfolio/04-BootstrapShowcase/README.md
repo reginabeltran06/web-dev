@@ -26,8 +26,8 @@ Select 5 elements from the following list and make a small demo of how would you
 ---
 
 - Color mode
-- Navbar with search field
-- Sticky footer
+- Navbar with search field              <-----1
+- Sticky footer                         <-----2
 - Collapsible sidebar
 - Drop downs with icon
 - Offcanvas content
