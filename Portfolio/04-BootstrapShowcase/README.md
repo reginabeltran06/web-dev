@@ -32,13 +32,13 @@ Select 5 elements from the following list and make a small demo of how would you
 - Drop downs with icon
 - Offcanvas content
 - Pagination on content
-- Complex modals
+- Complex modals                        <-----3
 - Badges with image and action
 - Breadcrumbs with icons
 - Loading buttons
-- Carousel with title and text
+- Carousel with title and text          <-----4
 - Hero with centered screenshot
-- Scrollspy
+- Scrollspy                             <-----5
 - Toast
 - Sign in form
 - Album

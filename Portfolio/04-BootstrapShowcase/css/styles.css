@@ -110,3 +110,8 @@ blockquote {
 #progress-bar .card{
   margin: 20px;
 }
+
+.carousel {
+  border-radius: 15px;
+  overflow: hidden;
+}
