@@ -13,7 +13,7 @@
     <div>
         <label for="num">Write a number</label>
         <input type="text" id="num" />
-        <button id="btn" onclick="getPrimeFactors()"> Go </button>
+        <button id="btn" onclick="getPrimeFactors(document.getElementById('num').value)"> Go </button>
         <br />
         <span id="pf"></span>
     </div>

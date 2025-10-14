@@ -4,10 +4,12 @@
 */
 // This array will keep memory of the previous fibonacci numbers
 var memo = {};
+
 function fibonacci() {
   "use strict";
-  var n = document.getElementById("num").value;
+  var n = parseInt(document.getElementById("num").value);
   var val = f(n);
+  document.getElementById("fibonacciLbl").innerText = val;
   return val;
 }
 
@@ -17,11 +19,13 @@ function f(n) {
   if (memo.hasOwnProperty(n)) {
     value = memo[n];
   } else {
-    //TODO: Implement the fibonacci function here!
+    if (n <= 1) {
+        value = n;
+      } else {
+        value = f(n - 1) + f(n - 2);
+      }
+      memo[n] = value;
+    }
 
-    memo[n] = value;
-  }
-
-  return value;
+  return value; 
 }
-console.log(fibonacci(15));

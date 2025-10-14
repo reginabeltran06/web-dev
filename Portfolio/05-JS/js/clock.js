@@ -16,6 +16,10 @@ function drawFace(ctx, radius) {
 
   // Center circle
   // TODO: make the central black circle
+  ctx.beginPath();
+  ctx.arc(0, 0, radius * 0.07, 0, 2 * Math.PI);
+  ctx.fillStyle = "#333";
+  ctx.fill();
 }
 
 function drawNumbers(ctx, radius) {
@@ -26,14 +30,16 @@ function drawNumbers(ctx, radius) {
   ctx.textBaseline = "middle";
   ctx.fillStyle = "#333";
   ctx.textAlign = "center";
-  ang = (num * Math.PI) / 6;
-  ctx.rotate(ang);
-  ctx.translate(0, -radius * 0.85);
-  ctx.rotate(-ang);
-  ctx.fillText(num.toString(), 0, 0);
-  ctx.rotate(ang);
-  ctx.translate(0, radius * 0.85);
-  ctx.rotate(-ang);
+  for (num = 1; num <= 12; num++) {
+    ang = (num * Math.PI) / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius * 0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius * 0.85);
+    ctx.rotate(-ang);
+  }
 }
 
 function drawTime(ctx, radius) {
@@ -42,13 +48,22 @@ function drawTime(ctx, radius) {
   var hour = now.getHours();
   var minute = now.getMinutes();
   var second = now.getSeconds();
+
   //hour
   hour = hour % 12;
-  drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+  var hourPos =
+    (hour * Math.PI) / 6 +      // a circle is 2pi radians so 2pi/12(12hours) --> pi/6
+    (minute * Math.PI) / (6 * 60) +    // for minutes /60
+    (second * Math.PI) / (360 * 60);  //   and seconds /360
+  drawHand(ctx, hourPos, radius * 0.5, radius * 0.07);
+
   //minute
-  drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+  var minutePos = (minute * Math.PI) / 30 + (second * Math.PI) / (30 * 60);
+  drawHand(ctx, minutePos, radius * 0.8, radius * 0.07);
+
   // second
-  drawHand(ctx, second, radius * 0.9, radius * 0.02);
+  var secondPos = (second * Math.PI) / 30;
+  drawHand(ctx, secondPos, radius * 0.9, radius * 0.02);
 }
 
 function drawHand(ctx, pos, length, width) {

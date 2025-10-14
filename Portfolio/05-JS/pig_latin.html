@@ -17,11 +17,19 @@
         adding a vocalic syllable to create such a suffix</p>
     <div>
         <input type="text" id="txtVal" />
-        <button id="btn" onclick="igpayAtinlay">
-            Click To Get The Pig Latin Translationr</button>
+        <button id="btn" onclick="translateToPigLatin()">
+            Click To Get The Pig Latin Translation</button>
         <br />
         <span id="pigLatLbl"></span>
     </div>
+
+    <script>
+        function translateToPigLatin() {
+            const input = document.getElementById('txtVal').value;
+            const result = igpayAtinlay(input);
+            document.getElementById('pigLatLbl').textContent = result;
+        }
+    </script>
 
 </body>
 

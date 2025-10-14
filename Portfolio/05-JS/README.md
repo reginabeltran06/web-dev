@@ -6,25 +6,25 @@ These exercises will just show multiple ways in which JS can interact with our w
 
 ---
 
-## Clock - 2 pts
+## Clock - 2 pts        <<this>>
 
 Complete the clock exercise by completing the tasks requested in the code by the _TODO_ labels.
 
 ---
 
-## Fibonacci - 1 pt
+## Fibonacci - 1 pt   <<this>>
 
 Solve for the requested fibonacci number.
 
 ---
 
-## Images - 1 pt
+## Images - 1 pt    <<this>>
 
 Move the image around the screen using the controls. Make sure that it always stay inside the viewport
 
 ---
 
-## Primes - 2 pts
+## Primes - 2 pts   <<this>>
 
 Extract the prime factors of the number given and show them in the "pf" span.
 
@@ -38,13 +38,13 @@ Following are the steps to find all prime factors.
 
 ---
 
-## Next primes - 1 pt.
+## Next primes - 1 pt.     
 
 Get the next prime value after the number provided.
 
 ---
 
-## Pig Latin - 2 pts
+## Pig Latin - 2 pts        <<this>>
 
 Pig Latin is a language game or argot in which words in English are altered, usually by adding a fabricated suffix or by moving the onset or initial consonant or consonant cluster of a word to the end of the word and adding a vocalic syllable to create such a suffix.
 
@@ -52,7 +52,7 @@ Transform the input received into its pig latin version. Fix or complete the cod
 
 ---
 
-## Sieve of Eratosthenes - 3 pts
+## Sieve of Eratosthenes - 3 pts        
 
 Get the value provided and then get all the prime numbers below that one.
 

@@ -4,15 +4,16 @@ Pig Latin
 
 function igpayAtinlay(str) {
   // TODO: Initialize the word array properly
-  var returnArray = [],
-    wordArray = [];
+  var returnArray = [];
+  var wordArray = str.split(' ');
+  
   // TODO: make sure that the output is being properly built to produce the desired result.
   for (var i = 0; i < wordArray.length; i++) {
     var word = wordArray[i];
     var beginning = word.charAt(0);
 
     if (/[aeiouAEIOU]/.test(beginning)) {
-      returnArray.push(word);
+      returnArray.push(word + "way");
       continue;
     }
 
@@ -23,7 +24,12 @@ function igpayAtinlay(str) {
         beginning += word.charAt(ii);
       }
     }
+    var remaining = word.substring(beginning.length);
+    var pigLatinWord = remaining + beginning + 'ay';
+    returnArray.push(pigLatinWord);
   }
+
+
   return returnArray.join(" ");
 }
 
