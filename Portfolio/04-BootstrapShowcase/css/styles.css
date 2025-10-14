@@ -115,3 +115,14 @@ blockquote {
   border-radius: 15px;
   overflow: hidden;
 }
+
+table {
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  vertical-align: middle;
+}
