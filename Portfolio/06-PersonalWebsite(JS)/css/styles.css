@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 html, body {
   height: 100%;
@@ -16,46 +16,47 @@ body {
 }
 
 .custom-navbar {
-  background-color: rgb(228, 137, 167);
+  background-color: rgb(190, 124, 146); 
   color: white;
-  font-family: "Klee One", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: .9rem;
 }
 
 .text-purple {
-  color: rgb(165, 42, 165) !important;
+  color: rgb(136, 20, 136) !important;
 }
+
 .bg-purple {
-  background-color: rgb(165, 42, 165) !important;
+  background-color: rgb(190, 124, 146)  !important;
 }
 
 h1 {
   font-family: "Sour Gummy", cursive;
-  color: rgb(228, 137, 167);
+  color: rgb(190, 124, 146);
   font-size: 4.5rem;
   line-height: 1.1;
   margin:  0;
 }
 
 h2 {
-  font-family: "Klee One", sans-serif;
-  color: rgb(165, 42, 165); 
+  font-family: "DM Sans", sans-serif;
+  color: rgb(134, 65, 123); 
   font-size: 2.5rem;
 }
 
 h3 {
-  font-family: "Klee One", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #a466bd;
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
 blockquote {
-  background-color: rgb(228, 137, 167);
+  background-color: rgb(190, 124, 146);
   color: white;
   padding: 20px;
   border-radius: 10px;
-  font-family: "Klee One", sans-serif;
+  font-family: "DM Sans", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   max-width: 700px; 
   margin: 30px auto;
