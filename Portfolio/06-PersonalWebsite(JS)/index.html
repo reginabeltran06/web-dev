@@ -1,12 +1,896 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website - Bootstrap Showcase</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <!--NAVBAR AND SCROLLSPY-->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#main-navbar"
+    data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <nav
+      id="main-navbar"
+      class="navbar navbar-expand-lg custom-navbar fixed-top"
+    >
+      <div class="container-fluid container-lg">
+        <a class="navbar-brand text-danger-emphasis" href="#">Regina Beltrán</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#bkgd">Background</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hobbies">Hobbies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#favorite-food">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bmtv">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#heroes">Heroes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fav-spots">Spots</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#schedule">Schedule</a>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow-1 container-fluid container-lg my-5 p-4">
+      <header class="text-center mb-5">
+        <div class="d-flex flex-column align-items-center mb-4">
+          <h1 class="mb-4">Regina Beltrán</h1>
+          <!--TOOLTIP-->
+          <img
+            id="pp"
+            src="images/yo.jpg"
+            alt="Regina Beltrán"
+            class="rounded-circle profile-img"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Hello World!"
+          />
+        </div>
+
+        <div
+          class="d-flex flex-column align-items-center mx-auto"
+          style="max-width: 400px"
+        >
+          <p class="lead mb-1">Student</p>
+          <p class="mb-2">- Guadalajara, Jalisco -</p>
+          <p class="text-muted">
+            I’m a third-semester Comp Sci and Engineering student at Universidad
+            Panamericana.
+          </p>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-8">
+            <blockquote class="text-center shadow">
+              "Education’s purpose is to replace an empty mind with an open
+              one."
+              <br />— <cite>Malcolm Forbes</cite>
+            </blockquote>
+          </div>
+        </div>
+      </header>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="bkgd" class="py-4">
+        <h2 class="text-center mb-4">
+          Background
+          <!--POPOVER-->
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            data-bs-toggle="popover"
+            data-bs-placement="top"
+            title="My Life Philosophy"
+            data-bs-content="Striving to align my knowledge with my passion for helping others."
+          >
+            ?
+          </button>
+        </h2>
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-8 text-center bg-light-subtle p-3 border rounded-4"
+          >
+            <p>
+              I was born in Guadalajara, Jalisco. I am the eldest daughter, I
+              only have one sister. I love spending time with my family and
+              friends. My goal in life is to be able to make the world a better
+              place with what I'm learning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="education" class="py-4">
+        <h2 class="text-center mb-4">Education</h2>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 justify-content-center"
+        >
+          <div class="col">
+            <div
+              class="d-flex align-items-center p-3 bg-light rounded-3 shadow-sm h-100"
+            >
+              <img
+                class="logo-img rounded-circle me-3"
+                src="images/british-institute-logo.png"
+                onerror="this.onerror=null; this.src='https://placehold.co/50x50/ffc0cb/000?text=BI'"
+                alt="British Institute Logo"
+              />
+              <div class="text-start">
+                <h5 class="mb-1">
+                  Elementary School <br />
+                  (2012 - 2018)
+                </h5>
+                <p class="mb-0 text-muted small">British Institute</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex align-items-center p-3 bg-light rounded-3 shadow-sm h-100"
+            >
+              <img
+                class="logo-img rounded-circle me-3"
+                src="images/british-institute-logo.png"
+                onerror="this.onerror=null; this.src='https://placehold.co/50x50/ffc0cb/000?text=BI'"
+                alt="British Institute Logo"
+              />
+              <div class="text-start">
+                <h5 class="mb-1">
+                  Middle School <br />
+                  (2018 - 2021)
+                </h5>
+                <p class="mb-0 text-muted small">British Institute</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex align-items-center p-3 bg-light rounded-3 shadow-sm h-100"
+            >
+              <img
+                class="logo-img rounded-circle me-3"
+                src="images/tecmilenio-logo.png"
+                onerror="this.onerror=null; this.src='https://placehold.co/50x50/ADD8E6/000?text=TM'"
+                alt="Universidad Tecmilenio Logo"
+              />
+              <div class="text-start">
+                <h5 class="mb-1">High School <br />(2021 - 2024)</h5>
+                <p class="mb-0 text-muted small">Universidad Tecmilenio</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex align-items-center p-3 bg-light rounded-3 shadow-sm h-100"
+            >
+              <img
+                class="logo-img rounded-circle me-3"
+                src="images/up-logo.jpg"
+                onerror="this.onerror=null; this.src='https://placehold.co/50x50/800080/FFF?text=UP'"
+                alt="Universidad Panamericana Logo"
+              />
+              <div class="text-start">
+                <h5 class="mb-1">
+                  College<br />
+                  (2024 - Present)
+                </h5>
+                <p class="mb-0 text-muted small">Universidad Panamericana</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="hobbies" class="py-4">
+        <h2 class="text-center mb-4">Hobbies</h2>
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100 p-4 bg-light rounded-4">
+              <div class="card-body">
+                <!--BUTTON GROUP-->
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Favorite Hobbies"
+                >
+                  <button type="button" class="btn btn-info">Reading</button>
+                  <button type="button" class="btn btn-secondary">
+                    Baking
+                  </button>
+                  <button type="button" class="btn btn-warning">
+                    Family Time
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="favorite-food" class="py-4">
+        <h2 class="text-center mb-4">Favorite Food</h2>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-5">
+            <div class="card shadow-sm border-0 h-100 p-3 bg-light rounded-4">
+              <div class="card-body">
+                <h3 class="card-title text-purple">Top 5</h3>
+
+                <!--ACCORDION-->
+                <div class="accordion" id="topFoodAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTopOne"
+                      >
+                        Mexican
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTopOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#topFoodAccordion"
+                    >
+                      <div class="accordion-body text-start">
+                        <ul>
+                          <li>Tacos al pastor</li>
+                          <li>Chilaquiles</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTopTwo"
+                      >
+                        Japanese
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTopTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#topFoodAccordion"
+                    >
+                      <div class="accordion-body text-start">
+                        <ul>
+                          <li>Sushi</li>
+                          <li>Ramen</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTopThree"
+                      >
+                        Italian
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTopThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#topFoodAccordion"
+                    >
+                      <div class="accordion-body text-start">
+                        <ul>
+                          <li>Carbonara</li>
+                          <li>Lasagna</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTopFour"
+                      >
+                        French
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTopFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#topFoodAccordion"
+                    >
+                      <div class="accordion-body text-start">
+                        <ul>
+                          <li>Onion Soup</li>
+                          <li>Crème brûlée</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTopFive"
+                      >
+                        Korean
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTopFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#topFoodAccordion"
+                    >
+                      <div class="accordion-body text-start">
+                        <ul>
+                          <li>Korean BBQ</li>
+                          <li>Mandu</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card shadow-sm border-0 h-100 p-3 bg-light rounded-4">
+              <div class="card-body">
+                <h3 class="card-title text-purple">Bottom 3</h3>
+                <div class="food-list">
+                  <ul class="list-group list-group-flush text-start">
+                    <li class="list-group-item">Arab</li>
+                    <li class="list-group-item">Turkish</li>
+                    <li class="list-group-item">Lebanese</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="bmtv" class="py-4">
+        <h2 class="text-center mb-5">Books, Movies & TV Shows</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <div class="col">
+            <div class="card media-item h-100 shadow-lg border-0 rounded-4">
+              <img
+                src="images/books.jpg"
+                alt="Stack of books"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-purple">Books</h4>
+                <ol class="list-group list-group-flush text-start">
+                  <li class="list-group-item">
+                    Miss Peregrine's Home for Peculiar Children
+                  </li>
+                  <li class="list-group-item">
+                    The Ballad of Songbirds and Snakes
+                  </li>
+                  <li class="list-group-item">Normal People</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card media-item h-100 shadow-lg border-0 rounded-4">
+              <img
+                src="images/movies.jpg"
+                alt="Movie reels"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-purple">Movies</h4>
+                <ol class="list-group list-group-flush text-start">
+                  <li class="list-group-item">Ready Player One?</li>
+                  <li class="list-group-item">Catching Fire</li>
+                  <li class="list-group-item">
+                    Harry Potter and the Chamber of Secrets
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card media-item h-100 shadow-lg border-0 rounded-4">
+              <img
+                src="images/tvShows.png"
+                alt="TV icon"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-purple">TV Shows</h4>
+                <ol class="list-group list-group-flush text-start">
+                  <li class="list-group-item">Gilmore Girls</li>
+                  <li class="list-group-item">Black Mirror</li>
+                  <li class="list-group-item">Gossip Girl</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="heroes" class="py-4">
+        <h2 class="text-center mb-5">Heroes / Writers / Musicians</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <div class="col">
+            <!--CARDS-->
+            <div
+              class="card hero-item h-100 shadow-lg border-0 text-center rounded-4"
+            >
+              <div class="card-header bg-danger-subtle">
+                <img
+                  class="rounded-circle hero-img mt-3 profile-img"
+                  src="images/tswift.jpg"
+                  alt="Taylor Swift"
+                />
+              </div>
+              <div class="card-body text-center">
+                <h4 class="card-title mb-1 text-purple">Taylor Swift</h4>
+                <p class="card-text mb-1">
+                  <small class="text-muted">1989 - Present</small>
+                </p>
+                <p class="fw-bold mb-2">Composer / Musician</p>
+                <p class="card-text small">
+                  14 Grammys (4× Album of the Year), highest-grossing tour, Time
+                  Person of the Year
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card hero-item h-100 shadow-lg border-0 text-center rounded-4"
+            >
+              <div class="card-header bg-danger-subtle">
+                <img
+                  class="rounded-circle hero-img mt-3 profile-img"
+                  src="images/marieCurie.jpg"
+                  alt="Marie Curie"
+                />
+              </div>
+              <div class="card-body text-center">
+                <h4 class="card-title mb-1 text-purple">Marie Curie</h4>
+                <p class="card-text mb-1">
+                  <small class="text-muted">1867 - 1934</small>
+                </p>
+                <p class="fw-bold mb-2">Physicist / Chemist</p>
+                <p class="card-text small">
+                  First woman to win a Nobel Prize, pioneering research on
+                  radioactivity
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card hero-item h-100 shadow-lg border-0 text-center rounded-4"
+            >
+              <div class="card-header bg-danger-subtle">
+                <img
+                  class="rounded-circle hero-img mt-3 profile-img"
+                  src="images/adaLovelace.jpg"
+                  alt="Ada Lovelace"
+                />
+              </div>
+              <div class="card-body text-center">
+                <h4 class="card-title mb-1 text-purple">Ada Lovelace</h4>
+                <p class="card-text mb-1">
+                  <small class="text-muted">1815 - 1852</small>
+                </p>
+                <p class="fw-bold mb-2">Mathematician / Writer</p>
+                <p class="card-text small">
+                  First computer programmer for the Analytical Engine
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="fav-spots" class="py-4 text-center">
+        <h2 class="mb-4">My Favorite Spots</h2>
+        <a href="destinations.html" class="btn btn-lg btn-light shadow-lg mb-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-geo-alt-fill me-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+            />
+          </svg>
+          My Favorite Spots
+        </a>
+
+        <div class="container my-5" style="max-width: 500px">
+          <div id="carouselSpots" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselSpots"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSpots"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSpots"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/firenze.jpg"
+                  class="d-block w-100"
+                  alt="Firenze, Italy"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Firenze</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/amsterdam.jpg"
+                  class="d-block w-100"
+                  alt="Amsterdam, Netherlands"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Amsterdam</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/whistler.jpg"
+                  class="d-block w-100"
+                  alt="Whistler, Canada"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Whistler</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselSpots"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselSpots"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border border-danger border-3 opacity-25 my-5" />
+
+      <section id="schedule" class="py-4 text-center">
+        <h2 class="mt-5 mb-4">Weekly Schedule Registration</h2>
+        <!--BUTTON AND COMPLEX MODAL-->
+        <button
+          type="button"
+          class="btn btn-lg btn-light shadow-lg"
+          data-bs-toggle="modal"
+          data-bs-target="#scheduleModal"
+        >
+          Open Schedule Registration
+        </button>
+      </section>
+
+      <div class="container my-5">
+        <div class="table-responsive">
+          <table class="table table-striped align-middle shadow-sm">
+            <thead class="table-info">
+              <tr>
+                <th scope="col">Status</th>
+                <th scope="col">Date</th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+                <th scope="col">Description</th>
+                <th scope="col">Place</th>
+                <th scope="col">Type</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="scheduleModal"
+        tabindex="-1"
+        aria-labelledby="scheduleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-info-subtle border rounded-4 shadow-lg">
+            <div class="modal-header bg-info border-bottom-0 rounded-top-4">
+              <h5 class="modal-title text-white" id="scheduleModalLabel">
+                New Schedule Entry
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body p-4">
+              <!--SPINNER-->
+              <form id="scheduleForm">
+                <!--FLOATING LABEL-->
+                <div class="form-floating mb-3">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    required
+                  /><label for="date">Date</label>
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="startTime"
+                        name="startTime"
+                        required
+                      /><label for="startTime">Time Start</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="endTime"
+                        name="endTime"
+                        required
+                      /><label for="endTime">Time End</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="activity"
+                    name="activity"
+                    required
+                    placeholder="Activity Name"
+                  /><label for="activity">Activity</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="place"
+                    name="place"
+                    placeholder="Location"
+                  /><label for="place">Place (Optional)</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-select"
+                    id="type"
+                    name="type"
+                    aria-label="Activity Type"
+                  >
+                    <option value="school">School</option>
+                    <option value="personal">Personal</option>
+                    <option value="professional">Professional</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <label for="type">Type</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Notes"
+                    id="notes"
+                    name="notes"
+                    style="height: 100px"
+                  ></textarea
+                  ><label for="notes">Notes</label>
+                </div>
+                <div class="form-check form-switch mb-4 text-start">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="freeBusy"
+                    name="freeBusy"
+                  />
+                  <label class="form-check-label" for="freeBusy"
+                    >Mark as Busy</label
+                  >
+                </div>
+              </form>
+            </div>
+            <div
+              class="modal-footer justify-content-between bg-light rounded-bottom-4"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                form="scheduleForm"
+                class="btn btn-secondary"
+              >
+                Register
+                <div
+                  id="loadingSpinner"
+                  class="spinner-border spinner-border-sm ms-2 text-white d-none"
+                  role="status"
+                >
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid container-lg my-5 p-4">
+        <hr class="border border-danger border-3 opacity-25 my-5" />
+
+        <!--PROGRESS BAR-->
+        <section id="progress-bar">
+          <h2 class="mt-5 mb-4">Progress Bar</h2>
+
+          <div
+            class="card mb-3 mx-auto shadow-lg"
+            style="max-width: 600px; z-index: 1030"
+          >
+            <div class="card-body p-2">
+              <div class="progress" style="height: 10px">
+                <div
+                  class="progress-bar bg-purple"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <!--STICKY FOOTER-->
+    <footer class="custom-navbar sticky-footer text-center py-3">
+      <div class="container">
+        <span class="text-danger-emphasis"
+          >&copy; Regina Beltrán<br />Web Development Fall 2025</span
+        >
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/server.js"></script>
+
+  </body>
 </html>
