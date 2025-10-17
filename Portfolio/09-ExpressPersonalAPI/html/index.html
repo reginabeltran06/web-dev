@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Express test</title>
 </head>
 
 <body>
     <% if (locals.error) { %>
-        <h3>
-            <%= error %>
-        </h3>
-        <% } %>
-            <form action="/greet" method="get">
-                Register:
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="submit" value="go next">
-            </form>
+        <h3 style="color: red"><%= error %></h3>
+    <% } %>
+
+    <form action="/greet" method="get">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Your name" required>
+        <input type="submit" value="Submit" />
+    </form>
+
+
+    <% if (locals.names && names.length) { %>
+        <h2>People greeted:</h2>
+        <ul>
+            <% names.forEach((n, i) => { %>
+                <li><a href="/wazzup/<%= i %>"> <%= n %></a></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <hr />
+
+    <!-- TODO List -->
+    <h2>TODO List</h2>
+    <form action="/task" method="post">
+        <label for="task">New task:</label>
+        <input type="text" id="task" name="task" required>
+        <button type="submit">Add task </button>
+    </form>
+
+    <% if (locals.tasks && tasks.length) { %>
+        <ul>
+            <% tasks.forEach((t, i) => { %>
+                <li>
+                    <span><%= t %></span>
+                    <form action="/task/<%= i %>/move" method="post" style="display:inline">
+                        <input type="hidden" name="direction" value="up">
+                        <button type="submit" <%= i === 0 ? 'disabled' : '' %>>▲</button>
+                    </form>
+                    <form action="/task/<%= i %>/move" method="post" style="display:inline">
+                        <input type="hidden" name="direction" value="down">
+                        <button type="submit" <%= i === tasks.length - 1 ? 'disabled' : '' %>>▼</button>
+                    </form>
+                    <form action="/task/<%= i %>?_method=DELETE" method="post" style="display:inline">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No tasks yet. Add one above!</p>
+    <% } %>
+
 
 </body>
-
 </html>
