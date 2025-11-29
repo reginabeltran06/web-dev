@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 DB - Drivers</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <img src="/images/StarLion.png" alt="logo" class="logo"/>
+    <h1>F1 Drivers DB</h1>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2 id="form-title">Driver information</h2>
+      <form id="driver-form">
+        <!-- hidden id used when editing -->
+        <input type="hidden" id="_id" name="_id" value="" />
+
+        <div class="row">
+          <label>Number</label>
+          <input type="number" id="num" name="num" placeholder="Number" />
+          <label>Code</label>
+          <input type="text" id="code" name="code" placeholder="Code" />
+        </div>
+
+        <div class="row">
+          <label>Forename</label>
+          <input type="text" id="forename" name="forename" placeholder="First name" />
+          <label>Surname</label>
+          <input type="text" id="surname" name="surname" placeholder="Last name" />
+        </div>
+
+        <div class="row">
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" />
+
+          <label>Nationality</label>
+          <select id="nation" name="nationality">
+            <% countries.forEach(function(c){ %>
+              <option value="<%= c.code %>"><%= c.label %></option>
+            <% }) %>
+          </select>
+        </div>
+
+        <div class="row">
+          <label>Biography URL</label>
+          <input type="url" id="url" name="url" placeholder="http://..." />
+          <label>Team</label>
+          <select id="team" name="team">
+            <option value="">-- no team --</option>
+            <% teams.forEach(function(t){ %>
+              <option value="<%= t.name %>"><%= t.name %></option>
+            <% }) %>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button id="save-btn" type="submit">Save</button>
+          <button id="reset-btn" type="button">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="list-actions">
+        <button id="toggle-view">Show: Drivers</button>
+        <input id="search" placeholder="Search name or code..." />
+      </div>
+
+      <div id="list-container">
+        <!-- initial rendering server-side for quick view -->
+        <table id="drivers-table" class="data-table">
+          <thead>
+            <tr>
+              <th>#</th><th>Code</th><th>Name</th><th>Nationality</th><th>Team</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% drivers.forEach(function(d){ %>
+              <tr data-id="<%= d._id %>">
+                <td class="num"><%= d.num %></td>
+                <td class="code"><%= d.code %></td>
+                <td class="name"><%= d.forename %> <%= d.surname %></td>
+                <td class="nat"><%= d.nationality %></td>
+                <td class="team"><%= d.team ? d.team.name : '' %></td>
+                <td class="actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="inline-edit-btn">Inline Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

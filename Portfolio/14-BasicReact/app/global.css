@@ -1,0 +1,100 @@
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.movie-card {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.15);
+}
+
+.good-side {
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.45) !important;
+}
+
+.evil-side {
+  box-shadow: 0 0 12px rgba(255, 30, 30, 0.45) !important;
+}
+
+.poster-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.poster.logo {
+  transform: scale(0.9);
+  opacity: 0.85;
+}
+
+.detail-card {
+  background-color: #141414;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.detail-card img {
+  border-radius: 10px;
+}
+
+.comment-card {
+  background-color: #222;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+input.form-control,
+textarea.form-control {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #aaaaaa;
+}
+
+.btn-primary,
+.btn-success,
+.btn-outline-success,
+.btn-outline-danger {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.character-bio {
+  color: #000 !important;
+}
